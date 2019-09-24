@@ -3,13 +3,13 @@
     <h1>スマホ揺れ画像ジェネレーター</h1>
     <div v-show="step==='file'">
       <div class="image-selector">
-        <p>画像を選択してください</p>
+        <p>ここをタップして<br>画像を選択してください</p>
         <input type="file" @change="onUpload">
       </div>
       <p class="sozaimoto">素材元：<a href="https://twitter.com/fZnHNsrh8yzwyAe/status/1175464068519362560" target="_blank">ぺろさんツイート</a><br>作った人：<a href="https://twitter.com/the_minojiro" target="_blank">みのじろー</a></p>
     </div>
     <div v-show="step==='area'">
-      <p>下の画像で揺らしたいエリアを描いて、決定ボタンを押してください</p>
+      <p>下の画像で揺らしたいエリアをタップして描いて、決定ボタンを押してください</p>
       <div class="area-selector">
         <div class="area-selector-inner">
           <img :src="srcImage" />
@@ -208,6 +208,7 @@ h1 {
   p {
     flex: 1;
     text-align: center;
+    font-size: 14px;
   }
   input {
     width: 100%;
